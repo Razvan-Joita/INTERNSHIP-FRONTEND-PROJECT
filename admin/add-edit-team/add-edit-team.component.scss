@@ -1,0 +1,24 @@
+@import "/src/colors.scss";
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-team-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.page-text-title {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+  background-color: $color-primary;
+}
+  

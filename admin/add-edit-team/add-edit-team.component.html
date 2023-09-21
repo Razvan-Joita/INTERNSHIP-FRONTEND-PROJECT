@@ -1,0 +1,45 @@
+<div class="add-team-container">
+  <form [formGroup]="teamFormGroup" (ngSubmit)="isEdit ? editTeam() : addTeam()">
+    <div class="page-text-title">
+      <h1>{{isEdit ? 'Update team ' + id : 'Add team'}}</h1>
+    </div>
+    <div class="form-content">
+      <mat-form-field>
+        <mat-label>Team name</mat-label>
+        <input
+          matInput
+          placeholder="Type here"
+          type="text"
+          [formControlName]="TeamFields.NAME"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Team Description</mat-label>
+        <input
+          matInput
+          placeholder="Type here"
+          type="text"
+          [formControlName]="TeamFields.DESCRIPTION"
+        />
+      </mat-form-field>
+      <!-- <mat-form-field>
+        <mat-label>Team Leader</mat-label>
+        <mat-select [formControlName]="TeamFields.TEAM_LEADER">
+          <mat-option
+            *ngFor="let teamleader of teamleaders"
+            [value]="teamleader.employeeDetailsId"
+          >
+            {{ teamleader.firstName }} {{ teamleader.lastName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> -->
+      <button
+        class="add-team-button"
+        type="submit"
+        mat-raised-button
+        [disabled]="!teamFormGroup.valid"
+        >{{isEdit ? 'Update team' : 'Add team'}}
+      </button>
+    </div>
+  </form>
+</div>

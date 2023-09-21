@@ -1,0 +1,31 @@
+<table>
+  <tr>
+    <th *ngFor="let column of headers">{{ column }}</th>
+  </tr>
+
+  <tr *ngFor="let employee of employeeList">
+    
+    <td>{{ employee.employeeDetailsId }}</td>
+    <td>
+      <div class="name">{{ employee.firstName }} {{ employee.lastName }}</div>
+    </td>
+    <td>{{ employee.workEmail }}</td>
+    <td>{{ employee.positionId?.name }}</td>
+    <td>
+      <ng-container
+        *ngFor="
+          let erp of employee.employeeRoleTeamProjectPositions;
+          let last = last
+        "
+      >
+        <div>
+          {{ erp.role?.name }} - {{ erp.team?.name }} -
+          {{ erp.project?.name }} - {{ erp.position?.name }}
+        </div>
+        <div *ngIf="!last">
+          <br />
+        </div>
+      </ng-container>
+    </td>
+  </tr>
+</table>

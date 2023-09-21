@@ -1,0 +1,46 @@
+@import "/src/colors.scss";
+@import "/src/styles.scss";
+
+.general-use-flex{
+  padding-left: 25px;
+}
+.employee-card-list {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+.employee-card {
+  text-align: center;
+  padding: 16px;
+  width: 250px;
+  height: 290px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  align-items: center;
+}
+
+.employee-card:hover {
+  background-color: $color-grey;
+}
+
+.employee-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-info mat-card-title {
+  font-size: 17px;
+}
+
+.employee-info mat-card-subtitle {
+  font-size: 13px;
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .general-use-flex{
+    padding-left: 1.5%;
+  }
+}

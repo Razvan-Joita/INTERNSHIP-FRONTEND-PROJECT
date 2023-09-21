@@ -1,0 +1,6 @@
+<div fxLayout="column" fxLayoutAlign="center center" class= "fixed-dimensions-images" [ngStyle]="{'background-color': circleColor}">
+    <img class="fixed-dimensions-images" *ngIf="user?.photoURL?.trim()" src="{{user?.photoURL}}" >
+    <div *ngIf="!user?.photoURL" class="initials" [ngStyle]="{'color': initialsTextColor}">
+        {{ user?.firstName?.charAt(0) || '' }}{{ user?.lastName?.charAt(0) || '' }}
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="general-use-flex">
+  <div class="employee-card-list" *ngFor="let user of userList">
+    <mat-card class="employee-card">
+      <mat-card-header>
+        <app-employee-avatar [user]="user"></app-employee-avatar>
+      </mat-card-header>
+      <mat-card-content class="employee-info">
+        <mat-card-title
+          >{{ user.firstName }} {{ user.lastName }}</mat-card-title
+        >
+        <mat-card-subtitle class="ellipsis">
+          {{ user.positionId?.name }}
+        </mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

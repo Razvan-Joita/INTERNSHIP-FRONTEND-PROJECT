@@ -1,0 +1,49 @@
+@import "/src/colors.scss";
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  overflow: hidden;
+  border-collapse: separate;
+  position: relative;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid $color-grey;
+  text-align: center; /* Center-align table cell content */
+}
+
+th {
+  background-color: $color-primary;
+}
+
+tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.team {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.team .team-name:not(:last-child)::after {
+  content: ", ";
+}

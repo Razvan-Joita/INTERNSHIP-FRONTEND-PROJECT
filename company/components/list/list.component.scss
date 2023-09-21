@@ -1,0 +1,78 @@
+@import "/src/colors.scss";
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-filed {
+  display: flex; /* Display children next to each other */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Distribute items evenly horizontally */
+  padding-left: 1em;
+  padding-top: 1em;
+  width: 100%; /* Use 100% width to occupy the entire container */
+  gap: 16px; /* Add some spacing between the form fields (adjust as needed) */
+}
+
+form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.toggle-button-div {
+  display: flex;
+  //gap: 100px;
+
+}
+
+.menu-button {
+  color: $color-primary;
+}
+
+.menu-button:disabled {
+  cursor: not-allowed;
+  color: grey;
+}
+
+.menu-button:enabled {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.add-user-button {
+ // position: relative;
+  //margin-right: 270px;
+}
+
+.pagination {
+  margin: 10px 10px 0 0;
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+  background-color: $color-primary;
+}
+
+/* Responsive styles for medium screens and smaller */
+
+@media only screen and (max-width: $breakpoint-md) {
+  .filter-container {
+    flex-wrap: wrap; /* Allow flex items to wrap */
+  }
+
+  .filter-filed {
+    width: 100%; /* Make the filter field full width on smaller screens */
+    flex-direction: column;
+  }
+
+  .toggle-button-div {
+    justify-content: center; /* Center the toggle buttons */
+  }
+
+  .add-user-button {
+    margin-right: 0; /* Remove margin on the add-user button */
+  }
+}

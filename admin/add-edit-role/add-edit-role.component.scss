@@ -1,0 +1,21 @@
+@import "/src/colors.scss";
+
+.add-role-container {
+  display: flex;
+  margin: 2em 0;
+  justify-content: center;
+}
+
+.page-text-title {
+  display: flex;
+  justify-content: center;
+}
+
+.add-role-button {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+  background-color: $color-primary;
+}

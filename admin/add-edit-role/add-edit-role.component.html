@@ -1,0 +1,26 @@
+<div class="add-role-container">
+  <form [formGroup]="form" (ngSubmit)="isEdit ? editRole() : addRole()">
+    <div class="page-text-title">
+      <h1>{{isEdit ? 'Update role ' + id : 'Add role'}}</h1>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Role name</mat-label>
+          <input
+            matInput
+            placeholder="Type here"
+            type="text"
+            formControlName="roleName"
+          />
+        </mat-form-field>
+    </div>
+    <div class="add-role-button">
+      <button
+        type="submit"
+        mat-raised-button
+        [disabled]="!form.valid"
+      >{{isEdit ? 'Update role' : 'Add role'}}
+      </button>
+    </div>
+  </form>
+</div>

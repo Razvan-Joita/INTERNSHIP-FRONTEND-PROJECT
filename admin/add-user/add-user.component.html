@@ -1,0 +1,61 @@
+<div class="add-user-container">
+  <form [formGroup]="userFormGroup" (ngSubmit)="createUser()">
+    <div class="page-text-title">
+      <h1>Add user</h1>
+    </div>
+    <div class="form-content">
+      <mat-form-field>
+        <mat-label>First name</mat-label>
+        <input
+          matInput
+          placeholder="Type here"
+          type="text"
+          [formControlName]="UserFields.FIRSTNAME"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Last name</mat-label>
+        <input
+          matInput
+          placeholder="Type here"
+          type="text"
+          [formControlName]="UserFields.LASTNAME"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Work email</mat-label>
+        <input
+          matInput
+          placeholder="Type here"
+          type="text"
+          [formControlName]="UserFields.WORK_EMAIL"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Role</mat-label>
+        <mat-select [formControlName]="UserFields.ROLE">
+          <mat-option *ngFor="let role of roles" [value]="role">{{
+            role
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Position</mat-label>
+        <input
+          matInput
+          placeholder="Type here"
+          type="text"
+          [formControlName]="UserFields.POSITION"
+        />
+      </mat-form-field>
+      <button
+        class="add-user-button"
+        type="submit"
+        mat-raised-button
+        [disabled]="!userFormGroup.valid"
+      >
+        Add user
+      </button>
+    </div>
+  </form>
+</div>

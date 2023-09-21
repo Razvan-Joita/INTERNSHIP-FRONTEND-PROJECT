@@ -1,0 +1,68 @@
+@import "/src/colors.scss";
+
+.navbar {
+  background-color: $color-black-actually-black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: sans-serif;
+  color: $color-white;
+  height: 40px;
+  top: 0;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 10%;
+  align-items: center;
+  padding-left: 1%;
+}
+
+.navbar-links a {
+  color: $color-white;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.navbar-links a:visited {
+  color: $color-white
+}
+
+.login {
+  margin-right: 3%;
+  margin-left: auto;
+  cursor: pointer;
+  color: $color-white;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  margin-right: 5%;
+}
+
+
+
+  @media screen and (max-width: $breakpoint-md) {
+    .navbar {
+      justify-content: flex-start;
+      padding-left: 20px;
+    }
+
+    .navbar-links {
+      align-items: flex-start;
+      padding-left: 0;
+    }
+
+
+    .login {
+      padding-left: 10%; /* Adjust the margin for spacing */
+      margin-left: 0;
+    }
+  }
+
